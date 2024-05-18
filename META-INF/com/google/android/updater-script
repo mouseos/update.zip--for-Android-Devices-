@@ -1,33 +1,4 @@
-ui_print("                                ");
-ui_print("                                ");
-ui_print("                                ");
-ui_print("________________________________");
-ui_print("                                ");
-ui_print("|------------------------------|");
-ui_print("|    PIRATE PARTY - MACKIEF    |");
-ui_print("|------------------------------|");
-ui_print("| 10%  Update Started          |");
-ui_print("| 30%  Reading Apps            |");
-ui_print("| 60%  Mounting filesystem     |");
-run_program("/sbin/busybox", "mount", "/system");
-run_program("/sbin/busybox", "mount", "/cache");
-run_program("/sbin/busybox", "mount", "/data");
-ui_print("| 80%  Installing Applications |");
-ui_print("Useless system app removal");
-delete("/system/app/CMFileManager.apk");
-delete("/system/app/CMWallpapers.apk");
-package_extract_dir("data", "/data");
-set_perm(1000, 1000, 0644, "/data/app/[PACKAGE].apk");
-set_perm_recursive(1000, 1000, 0777, 0777, "/data/data/PACKAGE_DATA_FOLDER");
-delete("/data/dalvik-cache/data@app@[PACKAGE].apk@classes.dex");
-run_program("/sbin/busybox", "umount", "/system");
-run_program("/sbin/busybox", "umount", "/cache");
-run_program("/sbin/busybox", "umount", "/data");
-ui_print("| 90%  Removing Dalvik-Cache   |");
-ui_print("| 100% Update complete         |");
-ui_print("|------------------------------|");
-ui_print("|www.pirateparty.altervista.org|");
-ui_print("|------------------------------|");
-ui_print("________________________________");
-
-
+ui_print("Hello world");
+ui_print("Hello world");
+ui_print("Hello world");
+ui_print("Hello world");
